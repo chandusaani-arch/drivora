@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="te">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>సీరియల్ లోకం — తెలుగు సీరియల్ వార్తలు & TRP ర్యాంకింగ్స్</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Telugu:wght@400;500;700&family=Noto+Serif+Telugu:wght@600;700&family=Work+Sans:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="ticker-bar">
+  <div class="ticker-track" id="ticker-track"></div>
+</div>
+
+<header class="site-header">
+  <div class="wrap">
+    <div class="site-title">సీరియల్<span class="accent"> లోకం</span></div>
+    <nav class="site-nav">
+      <a href="#news">వార్తలు</a>
+      <a href="#reviews">రివ్యూలు</a>
+      <a href="#trp">TRP ర్యాంకింగ్స్</a>
+      <a href="#actors">నటీనటులు</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <section class="spotlight" id="spotlight">
+    <div>
+      <div class="eyebrow">ఈ వారం స్పాట్‌లైట్</div>
+      <h1 id="spotlight-title"></h1>
+      <p id="spotlight-desc"></p>
+      <div class="meta">
+        <span id="spotlight-channel"></span>
+        <span id="spotlight-time"></span>
+      </div>
+    </div>
+    <div class="spotlight-badge" id="spotlight-badge"></div>
+  </section>
+
+  <section class="section" id="news">
+    <div class="section-head">
+      <h2>తాజా వార్తలు</h2>
+      <span class="count" id="news-count"></span>
+    </div>
+    <div class="news-grid" id="news-grid"></div>
+  </section>
+
+  <section class="section" id="trp">
+    <div class="section-head">
+      <h2>TRP ర్యాంకింగ్స్</h2>
+      <span class="count">ఈ వారం</span>
+    </div>
+    <table class="trp-table">
+      <thead>
+        <tr>
+          <th>ర్యాంక్</th>
+          <th>సీరియల్</th>
+          <th>ఛానల్</th>
+          <th>TRP</th>
+          <th>మార్పు</th>
+        </tr>
+      </thead>
+      <tbody id="trp-body"></tbody>
+    </table>
+  </section>
+
+  <section class="section" id="reviews">
+    <div class="section-head">
+      <h2>రివ్యూలు</h2>
+      <span class="count" id="reviews-count"></span>
+    </div>
+    <div class="review-scroll" id="review-scroll"></div>
+  </section>
+
+  <section class="section" id="actors">
+    <div class="section-head">
+      <h2>నటీనటులు</h2>
+      <span class="count" id="actors-count"></span>
+    </div>
+    <div class="actor-strip" id="actor-strip"></div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">సీరియల్ లోకం — తెలుగు సీరియల్ ఇండస్ట్రీ కోసం తయారు చేయబడింది</div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
