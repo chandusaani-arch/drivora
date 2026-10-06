@@ -1,95 +1,42 @@
-<!DOCTYPE html>
-<html lang="te">
+<!doctype html>
+<html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>సీరియల్ లోకం — తెలుగు సీరియల్ వార్తలు & TRP ర్యాంకింగ్స్</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Telugu:wght@400;500;700&family=Noto+Serif+Telugu:wght@600;700&family=Work+Sans:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>DRIVORA | Smarter Car Care</title>
+<meta name="description" content="Curated car cleaning and organization products for a cleaner, smarter drive.">
+<style>
+:root{--ink:#111827;--soft:#f3f4f6;--accent:#f59e0b;--white:#fff}
+*{box-sizing:border-box} body{margin:0;font-family:Arial,sans-serif;color:var(--ink);line-height:1.55}
+.wrap{max-width:1100px;margin:auto;padding:0 20px} header{border-bottom:1px solid #e5e7eb;background:#fff;position:sticky;top:0;z-index:5}
+nav{height:68px;display:flex;align-items:center;justify-content:space-between}.brand{font-size:25px;font-weight:900;letter-spacing:2px}
+nav a{color:var(--ink);text-decoration:none;margin-left:18px;font-weight:700}.hero{padding:86px 0;background:linear-gradient(135deg,#111827,#374151);color:#fff}
+.hero h1{font-size:clamp(40px,7vw,76px);line-height:1;margin:0 0 18px}.hero p{max-width:650px;font-size:20px;color:#e5e7eb}
+.btn{display:inline-block;background:var(--accent);color:#111827;padding:14px 22px;border-radius:10px;text-decoration:none;font-weight:900;margin-top:12px}
+section{padding:70px 0}.eyebrow{text-transform:uppercase;letter-spacing:2px;font-weight:900;color:#92400e}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.card{border:1px solid #e5e7eb;border-radius:18px;padding:24px;background:#fff;box-shadow:0 8px 30px rgba(0,0,0,.05)}
+.product-art{height:180px;border-radius:14px;background:var(--soft);display:grid;place-items:center;font-size:58px}.price{font-size:22px;font-weight:900}
+.muted{color:#6b7280}.how{background:var(--soft)}.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.step b{font-size:34px}
+footer{background:#111827;color:#d1d5db;padding:35px 0}.disclosure{font-size:13px;color:#6b7280}
+@media(max-width:760px){.grid,.steps{grid-template-columns:1fr}.hero{padding:60px 0}nav a{display:none}}
+</style>
 </head>
 <body>
-
-<div class="ticker-bar">
-  <div class="ticker-track" id="ticker-track"></div>
-</div>
-
-<header class="site-header">
-  <div class="wrap">
-    <div class="site-title">సీరియల్<span class="accent"> లోకం</span></div>
-    <nav class="site-nav">
-      <a href="#news">వార్తలు</a>
-      <a href="#reviews">రివ్యూలు</a>
-      <a href="#trp">TRP ర్యాంకింగ్స్</a>
-      <a href="#actors">నటీనటులు</a>
-    </nav>
-  </div>
-</header>
-
-<main class="wrap">
-
-  <section class="spotlight" id="spotlight">
-    <div>
-      <div class="eyebrow">ఈ వారం స్పాట్‌లైట్</div>
-      <h1 id="spotlight-title"></h1>
-      <p id="spotlight-desc"></p>
-      <div class="meta">
-        <span id="spotlight-channel"></span>
-        <span id="spotlight-time"></span>
-      </div>
-    </div>
-    <div class="spotlight-badge" id="spotlight-badge"></div>
-  </section>
-
-  <section class="section" id="news">
-    <div class="section-head">
-      <h2>తాజా వార్తలు</h2>
-      <span class="count" id="news-count"></span>
-    </div>
-    <div class="news-grid" id="news-grid"></div>
-  </section>
-
-  <section class="section" id="trp">
-    <div class="section-head">
-      <h2>TRP ర్యాంకింగ్స్</h2>
-      <span class="count">ఈ వారం</span>
-    </div>
-    <table class="trp-table">
-      <thead>
-        <tr>
-          <th>ర్యాంక్</th>
-          <th>సీరియల్</th>
-          <th>ఛానల్</th>
-          <th>TRP</th>
-          <th>మార్పు</th>
-        </tr>
-      </thead>
-      <tbody id="trp-body"></tbody>
-    </table>
-  </section>
-
-  <section class="section" id="reviews">
-    <div class="section-head">
-      <h2>రివ్యూలు</h2>
-      <span class="count" id="reviews-count"></span>
-    </div>
-    <div class="review-scroll" id="review-scroll"></div>
-  </section>
-
-  <section class="section" id="actors">
-    <div class="section-head">
-      <h2>నటీనటులు</h2>
-      <span class="count" id="actors-count"></span>
-    </div>
-    <div class="actor-strip" id="actor-strip"></div>
-  </section>
-
+<header><div class="wrap"><nav><div class="brand">DRIVORA</div><div><a href="#shop">Shop</a><a href="#why">Why us</a><a href="#about">About</a></div></nav></div></header>
+<main>
+<section class="hero"><div class="wrap"><div class="eyebrow">SMARTER CAR CARE</div><h1>Clean car.<br>Better drive.</h1><p>Useful car-cleaning and organization products, curated for everyday drivers. Start with the mess you can see — dust, crumbs and clutter.</p><a class="btn" href="#shop">SHOP THE PICKS</a></div></section>
+<section id="shop"><div class="wrap"><div class="eyebrow">Launch Collection</div><h2>Three products. One simple promise.</h2>
+<div class="grid">
+<article class="card"><div class="product-art">🧹</div><h3>Cordless Car Vacuum</h3><p class="muted">Hero product for seats, mats and hard-to-reach gaps.</p><p class="price">Check current price</p><a class="btn" href="YOUR_AMAZON_VACUUM_AFFILIATE_LINK" rel="sponsored nofollow">CHECK PRICE</a></article>
+<article class="card"><div class="product-art">✨</div><h3>Interior Cleaning Gel</h3><p class="muted">For vents, dashboard crevices and small dust traps.</p><p class="price">Check current price</p><a class="btn" href="YOUR_AMAZON_GEL_AFFILIATE_LINK" rel="sponsored nofollow">CHECK PRICE</a></article>
+<article class="card"><div class="product-art">📱</div><h3>Seat Gap Organizer</h3><p class="muted">Turns the awkward seat gap into useful storage.</p><p class="price">Check current price</p><a class="btn" href="YOUR_AMAZON_ORGANIZER_AFFILIATE_LINK" rel="sponsored nofollow">CHECK PRICE</a></article>
+</div></div></section>
+<section class="how" id="why"><div class="wrap"><div class="eyebrow">Why DRIVORA</div><h2>We filter the clutter.</h2><div class="steps">
+<div class="step"><b>01</b><h3>Problem-first</h3><p>Products must solve a visible, everyday car problem.</p></div>
+<div class="step"><b>02</b><h3>Demo-friendly</h3><p>We prioritize products that can be clearly demonstrated in short video.</p></div>
+<div class="step"><b>03</b><h3>Data-led</h3><p>Clicks and orders decide what gets more coverage — not hype.</p></div>
+</div></div></section>
+<section id="about"><div class="wrap"><h2>About DRIVORA</h2><p>DRIVORA is an independent product-discovery site focused on practical car-care and organization accessories.</p>
+<p class="disclosure"><strong>Affiliate disclosure:</strong> As an Amazon Associate, we earn from qualifying purchases. Product prices and availability may change. Always check the merchant page for current details.</p></div></section>
 </main>
-
-<footer>
-  <div class="wrap">సీరియల్ లోకం — తెలుగు సీరియల్ ఇండస్ట్రీ కోసం తయారు చేయబడింది</div>
-</footer>
-
-<script src="script.js"></script>
-</body>
-</html>
+<footer><div class="wrap"><strong>DRIVORA</strong><p>Clean • Organize • Upgrade</p><small>© 2026 DRIVORA. All rights reserved.</small></div></footer>
+</body></html>
